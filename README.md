@@ -1,0 +1,1 @@
+# silex-sentry-provider <sup>[![Build Status](https://travis-ci.org/moriony/silex-sentry-provider.png?branch=master)](https://travis-ci.org/moriony/silex-sentry-provider) [![Coverage Status](https://coveralls.io/repos/moriony/silex-sentry-provider/badge.png)](https://coveralls.io/r/moriony/silex-sentry-provider)</sup>

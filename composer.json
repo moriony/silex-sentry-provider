@@ -1,0 +1,29 @@
+{
+    "name": "moriony/silex-sentry-provider",
+    "type": "library",
+    "description":  "Sentry service provider for the Silex framwork.",
+    "keywords": ["sentry", "raven-php", "silex"],
+    "homepage": "https://github.com/moriony/silex-sentry-provider",
+    "license":  "MIT",
+    "authors": [
+        {
+            "name": "Vitaliy Chesnokov",
+            "email": "demateus@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",        
+        "pimple/pimple": "1.*",
+        "silex/silex": "1.0.*",
+        "raven/raven": "*"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Moriony": "src"
+        }
+    }
+}
