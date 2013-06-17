@@ -18,7 +18,7 @@
         "raven/raven": "*"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "dev-master",
+        "satooshi/php-coveralls": "*",
         "phpunit/phpunit": "*"
     },
     "autoload": {
