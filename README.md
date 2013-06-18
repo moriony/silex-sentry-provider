@@ -41,3 +41,18 @@ $app->error(function (\Exception $e, $code) use($app) {
     // ...
 });
 ```
+
+### Error handler registration
+Yoc can install error handlers and shutdown function to catch fatal errors
+```php
+// ...
+$errorHandler = $app['sentry.error_handler'];
+$errorHandler->registerExceptionHandler();
+$errorHandler->registerErrorHandler();
+$errorHandler->registerShutdownFunction();
+// ...
+```
+
+## Resources
+* [Silex error handlers docs](http://silex.sensiolabs.org/doc/usage.html#error-handlers)
+* [Raven-php code and docs](https://github.com/getsentry/raven-php)
