@@ -35,9 +35,9 @@ Here you can find [other sentry options](https://github.com/getsentry/raven-php#
 ###  Exception capturing
 ```php
 $app->error(function (\Exception $e, $code) use($app) {
-  // ...
-  $client = $app['sentry'];
-  $client->captureException($e);
-  // ...
+    // ...
+    $client = $app['sentry'];
+    $client->captureException($e);
+    // ...
 });
 ```
