@@ -22,7 +22,7 @@ If you don't need development libraries, use ```composer install --no-dev``` or 
 
 ### Service registration
 ```php
-$app->register(new SentryServiceProvider, array(
+$app->register(new Moriony\Silex\Provider\SentryServiceProvider, array(
     'sentry.options' => array(
         'dsn' => 'http://public:secret@example.com/1',
         // ... and other sentry options
