@@ -23,13 +23,15 @@ class SentryServiceProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        $app[self::SENTRY] = $app->share(function () use($app) {
-            $options = array_merge(SentryServiceProvider::$defaultOptions, $app[SentryServiceProvider::SENTRY_OPTIONS]);
+        $defaultOptions = self::$defaultOptions;
+
+        $app[self::SENTRY] = $app->share(function () use($app, $defaultOptions) {
+            $options = array_merge($defaultOptions, $app[SentryServiceProvider::SENTRY_OPTIONS]);
             return new \Raven_Client($options[SentryServiceProvider::OPT_DSN], $options);
         });
 
-        $app[self::SENTRY_ERROR_HANDLER] = $app->share(function() use($app) {
-            $options = array_merge(SentryServiceProvider::$defaultOptions, $app[SentryServiceProvider::SENTRY_OPTIONS]);
+        $app[self::SENTRY_ERROR_HANDLER] = $app->share(function() use($app, $defaultOptions) {
+            $options = array_merge($defaultOptions, $app[SentryServiceProvider::SENTRY_OPTIONS]);
             return new \Raven_ErrorHandler($app[SentryServiceProvider::SENTRY],
                                            $options[SentryServiceProvider::OPT_SEND_ERRORS_LAST]);
         });
