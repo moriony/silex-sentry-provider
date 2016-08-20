@@ -12,7 +12,7 @@ before_install:
   - composer install --no-interaction --prefer-source
 
 after_script:
-  - bin/test-reporter
+  - vendor/bin/test-reporter
 
 notifications:
   email: "demateus@gmail.com"
