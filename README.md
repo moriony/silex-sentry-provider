@@ -1,6 +1,10 @@
 # Silex Sentry Provider
 
-[![Build Status](https://travis-ci.org/moriony/silex-sentry-provider.png?branch=master)](https://travis-ci.org/moriony/silex-sentry-provider) [![Coverage Status](https://coveralls.io/repos/moriony/silex-sentry-provider/badge.png)](https://coveralls.io/r/moriony/silex-sentry-provider) [![Dependency Status](https://www.versioneye.com/user/projects/51bf5dd3f721e5000200104f/badge.png)](https://www.versioneye.com/user/projects/51bf5dd3f721e5000200104f)
+[![Code Climate](https://codeclimate.com/github/moriony/silex-sentry-provider/badges/gpa.svg)](https://codeclimate.com/github/moriony/silex-sentry-provider)
+[![Test Coverage](https://codeclimate.com/github/moriony/silex-sentry-provider/badges/coverage.svg)](https://codeclimate.com/github/moriony/silex-sentry-provider/coverage)
+[![Total Downloads](https://poser.pugx.org/moriony/silex-sentry-provider/downloads)](https://packagist.org/packages/moriony/silex-sentry-provider)
+[![Latest Stable Version](https://poser.pugx.org/moriony/silex-sentry-provider/v/stable)](https://packagist.org/packages/moriony/silex-sentry-provider)
+[![License](https://poser.pugx.org/moriony/silex-sentry-provider/license)](https://packagist.org/packages/moriony/silex-sentry-provider)
 
 [Sentry client](https://github.com/getsentry/raven-php) service provider for the [Silex](http://silex.sensiolabs.org/) framwork.
 
@@ -10,7 +14,7 @@ Add in your ```composer.json``` the require entry for this library.
 ```json
 {
     "require": {
-        "moriony/silex-sentry-provider": "1.0.*"
+        "moriony/silex-sentry-provider": "1.0.*"    
     }
 }
 ```
