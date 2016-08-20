@@ -9,7 +9,7 @@ matrix:
 
 before_install:
   - composer selfupdate
-  - composer install --dev --no-interaction --prefer-source
+  - composer install --no-interaction --prefer-source
 
 after_script:
   - bin/test-reporter
