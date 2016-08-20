@@ -18,8 +18,8 @@
         "sentry/sentry": "*"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "*",
-        "phpunit/phpunit": "~4.8.0"
+        "phpunit/phpunit": "~4.8.0",
+        "codeclimate/php-test-reporter": "~0.3.2"
     },
     "autoload": {
         "psr-0": {

@@ -14,7 +14,7 @@ Add in your ```composer.json``` the require entry for this library.
 ```json
 {
     "require": {
-        "moriony/silex-sentry-provider": "1.0.*"    
+        "moriony/silex-sentry-provider": "1.0.*"
     }
 }
 ```
