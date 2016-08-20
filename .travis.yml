@@ -1,14 +1,18 @@
 language: php
-php:
-  - 5.3
-  - 5.4
-  - 5.5
 
-before_install:  
+php:
+  - 5.6
+  - 7.0
+
+matrix:
+  fast_finish: true
+
+before_install:
+  - composer selfupdate
   - composer install --dev --no-interaction --prefer-source
 
 after_script:
-  - php vendor/bin/coveralls
+  - bin/test-reporter
 
 notifications:
   email: "demateus@gmail.com"

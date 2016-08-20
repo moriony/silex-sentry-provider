@@ -12,18 +12,17 @@
         }
     ],
     "require": {
-        "php": ">=5.3.2",        
-        "pimple/pimple": "*",
-        "silex/silex": "1.*",
-        "raven/raven": "*"
+        "php": ">=5.6",
+        "pimple/pimple": "~3.0",
+        "sentry/sentry": "~1.1"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "*",
-        "phpunit/phpunit": "3.*"
+        "phpunit/phpunit": "~4.8",
+        "codeclimate/php-test-reporter": "~0.3.2"
     },
     "autoload": {
-        "psr-0": {
-            "Moriony": "src"
+        "psr-4": {
+            "Moriony\\Silex\\Provider\\": "src/"
         }
     }
 }

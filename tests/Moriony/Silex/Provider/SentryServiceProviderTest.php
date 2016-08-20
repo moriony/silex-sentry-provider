@@ -1,34 +1,32 @@
 <?php
 namespace Moriony\Silex\Provider;
 
-use Silex\Application;
-use Moriony\Silex\Provider\SentryServiceProvider;
+use Pimple\Container;
 
 class SentryServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var Application
+     * @var Container
      */
-    protected $app;
+    protected $container;
 
     public function setUp()
     {
-        $this->app = new Application();
-        $this->app->register(new SentryServiceProvider, array(
+        $this->container = new Container();
+        $this->container->register(new SentryServiceProvider, array(
             SentryServiceProvider::SENTRY_OPTIONS => array(
                 SentryServiceProvider::OPT_DSN => null,
             )
         ));
-        $this->app->boot();
     }
 
     public function testRavenClientObtain()
     {
-        $this->assertInstanceOf('Raven_Client', $this->app[SentryServiceProvider::SENTRY]);
+        $this->assertInstanceOf('Raven_Client', $this->container[SentryServiceProvider::SENTRY]);
     }
 
     public function testRavenErrorHandlerObtain()
     {
-        $this->assertInstanceOf('Raven_ErrorHandler', $this->app[SentryServiceProvider::SENTRY_ERROR_HANDLER]);
+        $this->assertInstanceOf('Raven_ErrorHandler', $this->container[SentryServiceProvider::SENTRY_ERROR_HANDLER]);
     }
 }
